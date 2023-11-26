@@ -538,4 +538,9 @@
   .customise-img{
     display:none;
   }
+
+  .customise-subtext-div{
+    width: 90%;
+    margin: auto;
+  }
 }
