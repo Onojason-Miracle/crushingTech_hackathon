@@ -539,7 +539,10 @@
     display:none;
   }
 
- 
+  .customise-subtext-div{
+    width: 90%;
+   
+  }
 
   .customise-setup {
     margin-top: 4%;
