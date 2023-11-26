@@ -531,4 +531,8 @@
     width: 90%;
     margin: auto;
   }
+
+  .customise-img-div{
+    display:none;
+  }
 }
