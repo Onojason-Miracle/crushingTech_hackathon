@@ -9,43 +9,42 @@ function handleClearPlans() {
 
 
 
-// function handleCustomiseClick(setNumber) {
-//   document.querySelectorAll(".customise-setup").forEach((setup) => {
-//     const imgDiv = setup.querySelector(".customise-img-div");
-//     const subtextDiv = setup.querySelector(".customise-subtext-div");
-//     const themeDiv = setup.querySelector(".customise-theme");
-//     const textOne = setup.querySelector(".customise-setup-text-one");
+function handleCustomiseClick(setNumber) {
+  document.querySelectorAll(".customise-setup").forEach((setup) => {
+    const imgDiv = setup.querySelector(".customise-img-div");
+    const subtextDiv = setup.querySelector(".customise-subtext-div");
+    const themeDiv = setup.querySelector(".customise-theme");
+    const textOne = setup.querySelector(".customise-setup-text-one");
    
   
 
-//     // Hiding all the setups before dey are clicked
-//     imgDiv.style.display = "none";
-//     subtextDiv.style.display = "none";
-//     themeDiv.style.display = "none";
-//     textOne.style.fontWeight = "500";
-//     textOne.style.marginTop = "3.2%";
-//     setup.style.backgroundColor = "";
+    // Hiding all the setups before dey are clicked
+    imgDiv.style.display = "none";
+    subtextDiv.style.display = "none";
+    themeDiv.style.display = "none";
+    textOne.style.fontWeight = "500";
+    textOne.style.marginTop = "3.2%";
+   
     
-//   });
+  });
 
-//   const setupDiv = document.querySelector(`#customise-setup-${setNumber}`);
-//   const imgDiv = setupDiv.querySelector(".customise-img-div");
-//   const subtextDiv = setupDiv.querySelector(".customise-subtext-div");
-//   const themeDiv = setupDiv.querySelector(".customise-theme");
-//   const textOne = setupDiv.querySelector(".customise-setup-text-one");
-//   const setupWrapper = setupDiv.querySelector(".customise-setup");
+  const setupDiv = document.querySelector(`#customise-setup-${setNumber}`);
+  const imgDiv = setupDiv.querySelector(".customise-img-div");
+  const subtextDiv = setupDiv.querySelector(".customise-subtext-div");
+  const themeDiv = setupDiv.querySelector(".customise-theme");
+  const textOne = setupDiv.querySelector(".customise-setup-text-one");
+  const setupWrapper = setupDiv.querySelector(".customise-setup");
 
-//   // Showing all the setups after its clicked
-//   imgDiv.style.display = "block";
-//   subtextDiv.style.display = "block";
-//   themeDiv.style.display = "flex";
-//   themeDiv.style.alignItems = "center";
-//   themeDiv.style.justifyContent = "center";
-//   textOne.style.fontWeight = "600";
-//   textOne.style.marginTop = "1%";
-//   setupWrapper.style.backgroundColor = "red";
+  // Showing all the setups after its clicked
+  imgDiv.style.display = "block";
+  subtextDiv.style.display = "block";
+  themeDiv.style.display = "flex";
+  themeDiv.style.alignItems = "center";
+  themeDiv.style.justifyContent = "center";
+  textOne.style.fontWeight = "600";
+  textOne.style.marginTop = "1%";
 
-// }
+}
 
 
 
@@ -130,72 +129,3 @@ document.querySelector(".setup-svg-div").addEventListener("mouseout", unhover);
 // 6. when one box is displaying a content, the others should Not - done
 // 7. responsiveness
 // 8. accessibility to keyboard users
-
-
-
-function handleCustomiseClick(setNumber) {
-    document.querySelectorAll(".customise-setup").forEach((setup) => {
-      resetSetupStyles(setup);
-    });
-  
-    const setupDiv = document.querySelector(`#customise-setup-${setNumber}`);
-    if (setupDiv) {
-      const imgDiv = setupDiv.querySelector(".customise-img-div");
-      const subtextDiv = setupDiv.querySelector(".customise-subtext-div");
-      const themeDiv = setupDiv.querySelector(".customise-theme");
-      const textOne = setupDiv.querySelector(".customise-setup-text-one");
-      const setupWrapper = setupDiv.querySelector(".customise-setup");
-  
-      // Showing all the setups after it's clicked
-      imgDiv.style.display = "block";
-      subtextDiv.style.display = "block";
-      themeDiv.style.display = "flex";
-      themeDiv.style.alignItems = "center";
-      themeDiv.style.justifyContent = "center";
-      textOne.style.fontWeight = "600";
-      textOne.style.marginTop = "1%";
-      setupWrapper.style.backgroundColor = "red";
-  
-      // Set focus on the clicked setup for better keyboard navigation
-      setupWrapper.focus();
-    }
-  }
-  
-  function resetSetupStyles(setup) {
-    const imgDiv = setup.querySelector(".customise-img-div");
-    const subtextDiv = setup.querySelector(".customise-subtext-div");
-    const themeDiv = setup.querySelector(".customise-theme");
-    const textOne = setup.querySelector(".customise-setup-text-one");
-    const setupWrapper = setup.querySelector(".customise-setup");
-  
-    // Hiding all the setups before they are clicked
-    imgDiv.style.display = "none";
-    subtextDiv.style.display = "none";
-    themeDiv.style.display = "none";
-    textOne.style.fontWeight = "500";
-    textOne.style.marginTop = "3.2%";
-    setupWrapper.style.backgroundColor = "";
-  
-    // Make setups focusable for keyboard navigation
-    setupWrapper.tabIndex = -1;
-  }
-  
-  // Add event listeners for keyboard navigation
-  document.querySelectorAll(".customise-setup").forEach((setup) => {
-    setup.addEventListener("keydown", function (event) {
-      if (event.key === "Enter" || event.key === " ") {
-        const setNumber = setup.dataset.number;
-        handleCustomiseClick(setNumber);
-      }
-    });
-  
-    setup.addEventListener("focus", function () {
-      resetSetupStyles(setup);
-    });
-  });
-  
-  // Ensure setups can be focused by adding tabindex
-  document.querySelectorAll(".customise-setup").forEach((setup) => {
-    setup.tabIndex = 0;
-  });
-  
