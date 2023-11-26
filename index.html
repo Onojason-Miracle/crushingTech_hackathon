@@ -126,14 +126,14 @@
               </div>
 
               <div class="status-bar-div">
-                <p class="status-bar-text">1 / 5 completed</p>
+                <p class="status-bar-text" id="statusText">0 / 5 completed</p>
                 <div class="status-bar">
-                  <div class="progress-bar"></div>
+                  <div class="progress-bar" id="progressBar"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="setup-svg-div">
+          <div class="setup-svg-div" onclick="toggleSetups()">
             <svg
               width="41"
               height="40"
@@ -141,6 +141,7 @@
               fill="#1a1a1a"
               xmlns="http://www.w3.org/2000/svg"
               class="setup-svg"
+              
             >
               <path
                 fill-rule="evenodd"
@@ -149,6 +150,12 @@
                 fill="#1a1a1a"
               />
             </svg>
+
+
+            <svg width="41" height="40" viewBox="0 0 21 20" fill="none" class="setup-svg-two"  xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#1a1a1a"/>
+                </svg>
+                
           </div>
         </div>
 
@@ -164,6 +171,7 @@
                   viewBox="0 0 32 32"
                   fill="none"
                   class="customise-svg"
+                  onclick="handleSvgClick(this)"
                 >
                   <circle
                     cx="16"
@@ -179,7 +187,7 @@
               </div>
 
               <div class="customise-setup-text">
-                <p class="customise-setup-text-one">
+                <p  onclick="handleCustomiseClick(1)" class="customise-setup-text-one">
                   Customize your online store
                 </p>
 
@@ -225,6 +233,7 @@
                     viewBox="0 0 32 32"
                     fill="none"
                     class="customise-svg"
+                    onclick="handleSvgClick(this)"
                   >
                     <circle
                       cx="16"
@@ -286,6 +295,7 @@
                       viewBox="0 0 32 32"
                       fill="none"
                       class="customise-svg"
+                      onclick="handleSvgClick(this)"
                     >
                       <circle
                         cx="16"
@@ -332,7 +342,7 @@
             </div>
 
             
-          </div>
+          
           <!-- fourth oone -->
           <div>
             <div class="customise-setup" id="customise-setup-4">
@@ -348,6 +358,7 @@
                       viewBox="0 0 32 32"
                       fill="none"
                       class="customise-svg"
+                      onclick="handleSvgClick(this)"
                     >
                       <circle
                         cx="16"
@@ -409,6 +420,7 @@
                           viewBox="0 0 32 32"
                           fill="none"
                           class="customise-svg"
+                          onclick="handleSvgClick(this)"
                         >
                           <circle
                             cx="16"

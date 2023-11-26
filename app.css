@@ -203,6 +203,8 @@
   cursor: pointer;
 }
 
+
+
 .select-plan-svg {
   width: 20px;
   height: 20px;
@@ -214,6 +216,7 @@
   margin: auto;
   background-color: #fff;
   border-radius: 8px;
+  padding-bottom: 2%;
 }
 
 .setup-guide-one {
@@ -236,6 +239,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#setups{
+    display:none
 }
 
 .setup-guide-text-div {
@@ -307,17 +314,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor:pointer;
 }
 
-.setup-svg {
+.setup-svg, .setup-svg-two {
   width: 20px;
   height: 20px;
+  cursor:pointer
 }
+
+.setup-svg-two{
+   
+    display: none;
+}
+
+
+
 
 .customise-setup {
   display: flex;
   justify-content: space-between;
-  /* height: 141px; */
   padding: 8px, 8px, 12px, 8px;
   border-radius: 10px;
   width: 98%;
@@ -333,14 +349,15 @@
 
 .customise-setup-svg-div {
   width: 24px;
-
-  cursor: pointer;
+    cursor: pointer;
+    transition: width 0.3s;
 }
 
 .customise-svg {
   width: 24px;
   height: 24px;
   padding: 2px;
+  cursor: pointer;
 }
 
 .customise-setup-text {
@@ -358,6 +375,7 @@
   letter-spacing: 0em;
   color: #303030;
   margin-top: 3.2%;
+  cursor: pointer;
 }
 
 .customise-subtext-div {
