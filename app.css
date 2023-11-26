@@ -313,6 +313,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+ 
+ 
 }
 
 .setup-svg,
@@ -320,7 +322,18 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-}
+  transition: transform 0.5s;
+  }
+
+  .rotate {
+    transition: transform 0.10s ease; /* You can adjust the duration and easing function */
+  }
+  
+  .rotate.rotate180 {
+    transform: rotate(180deg);
+  }
+  
+
 
 .setup-svg-two {
   display: none;

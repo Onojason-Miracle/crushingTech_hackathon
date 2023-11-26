@@ -48,6 +48,48 @@ function handleCustomiseClick(setNumber) {
 
 
 
+
+
+
+function toggleSetups() {
+    const setupSvg = document.querySelector(".setup-svg");
+    const setupSvgTwo = document.querySelector(".setup-svg-two");
+    const setups = document.getElementById("setups");
+  
+    // Get the current display style of the setups element
+    const setupsDisplayStyle = window
+      .getComputedStyle(setups)
+      .getPropertyValue("display");
+  
+    // Check if the setups element is initially displayed or not
+    if (setupsDisplayStyle === "none") {
+      setups.style.display = "block";
+      setupSvg.style.display = "none";
+      setupSvgTwo.style.display = "block";
+    } else {
+      setups.style.display = "none";
+      setupSvg.style.display = "block";
+      setupSvgTwo.style.display = "none";
+    }
+  }
+
+
+  function rotateOnClick() {
+    const setupSvg = document.querySelector(".setup-svg");
+    const setupSvgTwo = document.querySelector(".setup-svg-two");
+    setupSvg.classList.toggle("rotate180");
+    setupSvgTwo.classList.toggle("rotate180");
+  }
+  
+  document.querySelector(".setup-svg").addEventListener("click", rotateOnClick);
+  document.querySelector(".setup-svg-two").addEventListener("click", rotateOnClick);
+  
+  
+
+  
+
+
+
 const progressBar = document.getElementById("progressBar");
 const statusText = document.getElementById("statusText");
 
@@ -81,36 +123,16 @@ function handleSvgClick(svgElement) {
 
 
 
-function toggleSetups() {
-  const setupSvg = document.querySelector(".setup-svg");
-  const setupSvgTwo = document.querySelector(".setup-svg-two");
-  const setups = document.getElementById("setups");
-  const setUpDiv = document.querySelector(".setup-svg-div");
 
-  const setupsDisplayStyle = window
-    .getComputedStyle(setups)
-    .getPropertyValue("display");
-
-  if (setups.style.display === "none") {
-    setups.style.display = "block";
-    setupSvg.style.display = "none";
-    setupSvgTwo.style.display = "block";
-  } else {
-    setups.style.display = "none";
-    setupSvg.style.display = "block";
-    setupSvgTwo.style.display = "none";
+  function hover() {
+    const setUpDiv = document.querySelector(".setup-svg-div");
+  
+    setUpDiv.style.backgroundColor = "#F3F3F3";
+    setUpDiv.style.borderRadius = "5px";
   }
-}
 
-function hover() {
-  const setUpDiv = document.querySelector(".setup-svg-div");
+  document.querySelector(".setup-svg-div").addEventListener("mouseover", hover);
 
-  setUpDiv.style.backgroundColor = "#F3F3F3";
-  setUpDiv.style.borderRadius = "5px";
-}
-
-
-document.querySelector(".setup-svg-div").addEventListener("mouseover", hover);
 
 function unhover() {
   const setUpDiv = document.querySelector(".setup-svg-div");
