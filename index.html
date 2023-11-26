@@ -21,7 +21,10 @@
             src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
             alt="shopify-logo"
             class="logo-img"
+            
           />
+
+          <img  src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="shopify-logo" class="logo-img-two" />
         </div>
 
         <div>
@@ -90,7 +93,7 @@
               <p>Select a plan</p>
             </div>
 
-            <div class="select-plan-svg-div">
+            <div class="select-plan-svg-div" onclick="handleClearPlans()">
               <svg
                 width="41"
                 height="40"
@@ -108,6 +111,8 @@
           </div>
         </div>
       </div>
+
+      <div class="margin"></div>
 
       <div class="setup-guide">
         <div class="setup-guide-one">
@@ -149,43 +154,308 @@
 
         <!-- other setups -->
         <div id="setups">
-            <div class="customise-setup" id="customise-setup-1">
-                <div class="customise-setup-div" onclick="handleCustomiseClick(1)">
-                    <div class="customise-setup-svg-div" >
+          <div class="customise-setup" id="customise-setup-1">
+            <div class="customise-setup-div" onclick="handleCustomiseClick(1)">
+              <div class="customise-setup-svg-div">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  class="customise-svg"
+                >
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="12"
+                    stroke="grey"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-dasharray="4 6"
+                  />
+                </svg>
+              </div>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none" class="customise-svg">
-                            <circle cx="16" cy="16" r="12" stroke="grey" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
-                          </svg>
-                    
+              <div class="customise-setup-text">
+                <p class="customise-setup-text-one">
+                  Customize your online store
+                </p>
 
-                    </div>  
-                    
+                <div class="customise-subtext-div">
+                  <p class="customise-subtext-div-one">
+                    Choose a theme and add your logo, colors, and images to
+                    reflect your brand.
+                    <a
+                      href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                      class="customise-subtext-div-two"
+                      >Learn more</a
+                    >
+                  </p>
+                  <p class="customise-subtext-div-two"></p>
+                </div>
+
+                <div class="customise-theme">
+                  <p class="customise-theme-text">Customize theme</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="customise-img-div">
+              <img
+                src="https://crushingit.tech/hackathon-assets/customise-store.png"
+                alt="Customize your online store.img"
+                class="customise-img"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="customise-setup" id="customise-setup-2">
+              <div
+                class="customise-setup-div"
+                onclick="handleCustomiseClick(2)"
+              >
+                <div class="customise-setup-svg-div">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40"
+                    height="40"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="customise-svg"
+                  >
+                    <circle
+                      cx="16"
+                      cy="16"
+                      r="12"
+                      stroke="grey"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-dasharray="4 6"
+                    />
+                  </svg>
+                </div>
+
+                <div class="customise-setup-text">
+                  <p class="customise-setup-text-one">Add your first product</p>
+
+                  <div class="customise-subtext-div">
+                    <p class="customise-subtext-div-one">
+                      Write a description, add photos, and set pricing for the
+                      products you plan to sell.<a
+                        href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                        class="customise-subtext-div-two"
+                        >Learn more</a
+                      >
+                    </p>
+                    <p class="customise-subtext-div-two"></p>
+                  </div>
+
+                  <div class="customise-theme">
+                    <p class="customise-theme-text">Add Product</p>
+
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="customise-img-div">
+                <img
+                  src="https://crushingit.tech/hackathon-assets/product.png"
+                  class="product-img"
+                />
+              </div>
+            </div>
+          </div>
+
+
+          <div>
+            <div class="customise-setup" id="customise-setup-3">
+                <div
+                  class="customise-setup-div"
+                  onclick="handleCustomiseClick(3)"
+                >
+                  <div class="customise-setup-svg-div">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      class="customise-svg"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="12"
+                        stroke="grey"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-dasharray="4 6"
+                      />
+                    </svg>
+                  </div>
+  
+                  <div class="customise-setup-text">
+                    <p class="customise-setup-text-one">Add a custom domain</p>
+  
+                    <div class="customise-subtext-div">
+                      <p class="customise-subtext-div-one">
+                        Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store.<a
+                          href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                          class="customise-subtext-div-two"
+                          >Learn more</a
+                        >
+                      </p>
+                      <p class="customise-subtext-div-two"></p>
+                    </div>
+  
+                    <div class="customise-theme">
+                      <p class="customise-theme-text">Add domain</p>
+  
+                 
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="customise-img-div">
+                  <img
+                    src="https://crushingit.tech/hackathon-assets/website.png"
+                    class="domain-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          <!-- fourth oone -->
+          <div>
+            <div class="customise-setup" id="customise-setup-4">
+                <div
+                  class="customise-setup-div"
+                  onclick="handleCustomiseClick(4)"
+                >
+                  <div class="customise-setup-svg-div">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      class="customise-svg"
+                    >
+                      <circle
+                        cx="16"
+                        cy="16"
+                        r="12"
+                        stroke="grey"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-dasharray="4 6"
+                      />
+                    </svg>
+                  </div>
+  
+                  <div class="customise-setup-text">
+                    <p class="customise-setup-text-one">Name your store</p>
+  
+                    <div class="customise-subtext-div">
+                      <p class="customise-subtext-div-one">
+                        Your temporary store name is currently Davii collections. The store name appear in your admin and online store.<a
+                          href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                          class="customise-subtext-div-two"
+                          >Learn more</a
+                        >
+                      </p>
+                      <p class="customise-subtext-div-two"></p>
+                    </div>
+  
+                    <div class="customise-theme">
+                      <p class="customise-theme-text">Name store</p>
+  
+                 
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="customise-img-div">
+                  <img
+                    src="https://crushingit.tech/hackathon-assets/name-store.png"
+                    class="store-img"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- fifth one -->
+
+            <div>
+                <div class="customise-setup" id="customise-setup-5">
+                    <div
+                      class="customise-setup-div"
+                      onclick="handleCustomiseClick(5)"
+                    >
+                      <div class="customise-setup-svg-div">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          class="customise-svg"
+                        >
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="12"
+                            stroke="grey"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-dasharray="4 6"
+                          />
+                        </svg>
+                      </div>
+      
                       <div class="customise-setup-text">
-                        <p class="customise-setup-text-one">Customize your online store</p>
-                  
+                        <p class="customise-setup-text-one">Set up a payment provider</p>
+      
                         <div class="customise-subtext-div">
-                            <p class="customise-subtext-div-one">Choose a theme and add your logo, colors, and images to reflect your brand. <a href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes" class="customise-subtext-div-two">Learn more</a> </p>
-                            <p class="customise-subtext-div-two">
-                                
-                            </p>
+                          <p class="customise-subtext-div-one">
+                            Choose a payment provider to start accepting payments. you'll need to create an account with your payment provider and set it up with your shopify store.<a
+                              href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes"
+                              class="customise-subtext-div-two"
+                              >Learn more</a
+                            >
+                          </p>
+                          <p class="customise-subtext-div-two"></p>
                         </div>
-    
+      
                         <div class="customise-theme">
-                            <p class="customise-theme-text">Customize theme</p>
+                          <p class="customise-theme-text">Set up payment</p>
+      
+                     
                         </div>
                       </div>
                     </div>
-               
-
-                <div class="customise-img-div">
-                    <img  src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="Customize your online store.img" class="customise-img"/>
-                </div>
+      
+                    <div class="customise-img-div">
+                      <img
+                        src="https://crushingit.tech/hackathon-assets/payment.png"
+                        class="payment-img"
+                      />
+                    </div>
+                  </div>
             </div>
 
-           
-            <div></div>
-            <div></div>
-            <div></div>
+            <!-- end of setups -->
+          </div>
         </div>
       </div>
     </section>
