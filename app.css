@@ -460,6 +460,11 @@
     width: 95%;
   }
 
+  #setup-guide-main{
+    width: 90%;
+    margin: auto;
+  }
+
   .nav-writeup {
     width: 40px;
   }
@@ -522,12 +527,7 @@
     border-radius: 0;
   }
 
-  /* .customise-subtext-div-one{
-    width: 80%;
-    margin: auto;
-  } */
-
-  .customise-setup-text {
+  .customise-setup{
     width: 90%;
     margin: auto;
   }
